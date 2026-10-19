@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /*------------------------------------------------
+    Portfolio Filter Active
+  -------------------------------------------------*/
+  .mixitup-control-active {
+    @apply bg-black text-white;
+  }
+  /*------------------------------------------------
+    Cursor
+  -------------------------------------------------*/
+  .cursors {
+    @apply z-[1000] absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-all ease-linear duration-100 hidden lg:inline-block;
+  }
+  .cursors .mouse-caption, 
+  .cursors img {
+    @apply absolute top-0 left-0 ml-2;
+  }
+  .cursors .mouse-caption {
+    @apply backdrop-blur bg-themecolor/50 px-6 py-5;
+  }
+  .cursors .mouse-caption * {
+    @apply m-0;
+  }
+  .cursors img {
+    @apply min-w-[300px] w-[300px] transition ease-linear duration-100;
+  }
+  /*------------------------------------------------
+    Contact form submit result
+  -------------------------------------------------*/
+  .submit-result span.show-result {
+    @apply block mt-6;
+  }
+  /* Page Preloader */
+  .loaded .preloader {
+    @apply invisible opacity-0;
+  }
+}
